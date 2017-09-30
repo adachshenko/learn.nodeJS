@@ -1,0 +1,27 @@
+{
+  "name": "learn.nodejs",
+  "version": "1.0.0",
+  "description": "Practice Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adachshenko/learn.nodeJS.git"
+  },
+  "author": "Darya Adachshenko <adachshenko@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adachshenko/learn.nodeJS/issues"
+  },
+  "homepage": "https://github.com/adachshenko/learn.nodeJS#readme",
+  "dependencies": {
+    "2": "^1.0.0",
+    "babel": "^6.23.0",
+    "es2015": "0.0.0",
+    "preset": "^1.0.0",
+    "register": "0.0.0",
+    "stage": "^0.9.0"
+  }
+}

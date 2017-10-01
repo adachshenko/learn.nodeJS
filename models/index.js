@@ -1,2 +1,2 @@
-exports.user = require("./user");
-exports.product = require("./product");
+export * from './user';
+export * from './product';

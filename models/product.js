@@ -1,7 +1,5 @@
-class Product{
+export class Product{
     constructor(){
         console.log("Product module")
     }
 }
-
-exports.Product = Product;

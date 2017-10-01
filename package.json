@@ -4,6 +4,7 @@
   "description": "Practice Project",
   "main": "server.js",
   "scripts": {
+    "start": "babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/adachshenko/learn.nodeJS#readme",
   "dependencies": {
     "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",

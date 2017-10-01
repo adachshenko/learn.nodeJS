@@ -1,7 +1,7 @@
-import * as models from "./models";
-import config from "./config/config";
+import { User, Product} from "./models";
+import * as config from "./config";
 
-let product = new  models.Product();
-let user = new models.User();
+let product = new Product();
+let user = new User();
 
 console.log(config.applicationName);

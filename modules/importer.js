@@ -1,11 +1,10 @@
-import * as fs from 'fs';
+export class Importer {
 
-export class Importer{
-    import(path){
-
+    constructor(dirWatcher) {
+        dirWatcher.on("dirwatcher:changed", this.import);
     }
 
-    importSync(path){
-
+    import(files) {
+        console.log("Was changed!!! " + files);
     }
 }

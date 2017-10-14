@@ -6,6 +6,6 @@ let product = new Product();
 let user = new User();
 let dirWatcher = new DirWatcher();
 new Importer(dirWatcher);
-dirWatcher.watch("./data", 15000);
+dirWatcher.watch("./data", 10000);
 
 console.log(config.applicationName);

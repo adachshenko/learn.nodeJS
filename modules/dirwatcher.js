@@ -18,10 +18,7 @@ export class DirWatcher extends EventEmitter {
             if (addedFiles.length) {
                 this.emit('dirwatcher:changed', addedFiles);
                 files = checkedFiles;
-            } else {
-                console.log("NOT1111!");
             }
-
         }), delay);
     }
 

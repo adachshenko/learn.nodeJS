@@ -19,7 +19,6 @@ export class Importer {
             console.log(this.convertCsvToJson(this.getCsvString(DATA_DIR + path)))
 
         });
-
     }
 
     convertCsvToJson(parsedCsv) {

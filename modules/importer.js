@@ -32,8 +32,8 @@ export class Importer {
                 if (i === 0) {
                     headers = arrayFromLine;
                 } else {
-                    arrayFromLine.forEach((item, i) => {
-                        jsonObject[headers[i]] = item;
+                    arrayFromLine.forEach((item, j) => {
+                        jsonObject[headers[j]] = item;
                     })
                     jsonResult.push(jsonObject);
                 }

@@ -13,6 +13,7 @@ export class DirWatcher extends EventEmitter {
         setInterval(() => fs.readdir(path, (err, checkedFiles) => {
             if (err) {
                 console.log("Can't read folder")
+                throw err;
             }
             let addedFiles = this.getAddedFiles(files, checkedFiles);
             if (addedFiles.length) {
@@ -23,8 +24,7 @@ export class DirWatcher extends EventEmitter {
     }
 
     getAddedFiles(oldArr, newArr) {
-        return newArr.filter(i => {
-            return oldArr.indexOf(i) < 0
-        });
+        return newArr.filter(i => oldArr.indexOf(i) < 0
+        );
     }
 }

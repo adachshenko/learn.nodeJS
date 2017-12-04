@@ -8,6 +8,14 @@ const PRODUCT = {
 }
 
 http.createServer(function (req, res) {
+    req.on('error', (err) => {
+        console.error(err);
+        res.statusCode = 400;
+        res.end();
+    });
+    res.on('error', (err) => {
+        console.error(err);
+    });
     res.setHeader('Content-Type', 'application/json');
     res.write(JSON.stringify(PRODUCT));
     res.end();

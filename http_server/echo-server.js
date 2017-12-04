@@ -1,7 +1,6 @@
-//import * as http from 'http';  ?!
 let http = require('http');
 
-http.createServer(function (req, res) {
+http.createServer((req, res) => {
     req.on('error', (err) => {
         console.error(err);
         res.statusCode = 400;
@@ -10,7 +9,10 @@ http.createServer(function (req, res) {
     res.on('error', (err) => {
         console.error(err);
     });
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write('Hello World');
-    res.end();
-}).listen(8000);
+    if (req.method === 'GET' && req.url === '/echo') {
+        req.pipe(res);
+    } else {
+        res.statusCode = 404;
+        res.end();
+    }
+}).listen(8100);

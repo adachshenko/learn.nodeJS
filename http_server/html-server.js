@@ -19,12 +19,12 @@ http.createServer(function (req, res) {
 }).listen(8000);
 
 http.createServer(function (req, res) {
-    request.on('error', (err) => {
+    req.on('error', (err) => {
         console.error(err);
         response.statusCode = 400;
         response.end();
     });
-    response.on('error', (err) => {
+    res.on('error', (err) => {
         console.error(err);
     });
      fs.createReadStream('../data/html/index2.html').pipe(res);
